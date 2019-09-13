@@ -20,9 +20,6 @@
     "*.js": [
       "./node_modules/.bin/eslint --fix",
       "git add"
-    ],
-    "*.css": [
-      "stylelint src/*/*.(s)css --fix"
     ]
   },
   "files": [
@@ -50,12 +47,12 @@
     "react-styleguidist": "^9.1.16",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0",
+    "typescript": "^3.6.3",
     "webpack": "^4.40.2"
   }
 }

@@ -1,9 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel');
-
-import commonjs from 'rollup-plugin-commonjs';
-import postcss from 'rollup-plugin-postcss';
-import postcssModules from 'postcss-modules';
+import babel from 'rollup-plugin-babel';
 
 export default {
   input: 'src/index.js',
@@ -20,23 +16,8 @@ export default {
   ],
   plugins: [
     resolve(),
-    postcss({
-        plugins: [
-          postcssModules({
-            getJSON (id, exportTokens) {
-              cssExportMap[id] = exportTokens;
-            }
-          })
-        ],
-        getExportNamed: false,
-        getExport (id) {
-          return cssExportMap[id];
-        },
-        extract: 'dist/styles.css',
-      }),
-    commonjs(),
     babel({
       exclude: 'node_modules/**'
-    }),
+    })
   ]
 };
