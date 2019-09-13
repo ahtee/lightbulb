@@ -1,6 +1,6 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "./dist/lightbulb.bundle.js",
   "license": "MIT",
   "dependencies": {
