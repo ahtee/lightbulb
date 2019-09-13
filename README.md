@@ -1,4 +1,4 @@
-# :bulb: Bulb - A GE React component library
+# :bulb: Lightbulb - React component library
 
 Bulb is a component library built in React that serves as a reusable component library for modern user interfaces.
 
