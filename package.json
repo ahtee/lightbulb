@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "license": "MIT",
+  // "publishConfig": {
+  //   "registry": "https://npm.pkg.github.com/@generalelectric"
+  // },
   "dependencies": {
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",

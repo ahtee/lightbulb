@@ -2,7 +2,29 @@
 
 Bulb is a component library built in React that serves as a reusable component library for modern user interfaces.
 
-## Installation
+## Publishing to Github package repository
+
+Step 1: Add the following to `package.json`:
+
+```json
+"publishConfig": {
+    "registry": "https://npm.pkg.github.com/@generalelectric"
+  }
+```
+
+Step 2: Authenticate
+
+```sh
+$ npm login --registry=https://npm.pkg.github.com/
+```
+
+Step 3: Publish package
+
+```sh
+$ npm publish
+```
+
+## Installation :construction:
 
 ### NPM
 
