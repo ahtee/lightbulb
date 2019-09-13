@@ -3,6 +3,6 @@ const path = require('path');
 
 module.exports = {
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'src/ThemeWrapper')
-  }
+    Wrapper: path.join(__dirname, 'src/ThemeWrapper'),
+  },
 };

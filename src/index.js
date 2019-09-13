@@ -1,5 +1,5 @@
 /* Components */
-import Button from '../src/Button';
+import Button from '../src/components/Button';
 import Card from '../src/components/Card';
 import Footer from '../src/components/Footer';
 import Nav from '../src/components/Nav';
