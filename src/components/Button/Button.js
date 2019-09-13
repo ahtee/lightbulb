@@ -11,17 +11,17 @@ import colors from '../../utils/colors';
 
 function Button(props) {
   const StyledButton = styled.button`
-    background-color: ${`outline` in props
-      ? `transparent`
-      : `white` in props
+    background-color: ${'outline' in props
+      ? 'transparent'
+      : 'white' in props
       ? colors.white
       : colors.blue};
-    color: ${`outline` in props
+    color: ${'outline' in props
       ? colors.blue
-      : `white` in props
+      : 'white' in props
       ? colors.blue
       : colors.white};
-    border: ${`outline` in props ? `2px solid ${colors.blue}` : `none`};
+    border: ${'outline' in props ? `2px solid ${colors.blue}` : 'none'};
     border-radius: 50px;
     letter-spacing: 1px;
     max-height: 40px;
