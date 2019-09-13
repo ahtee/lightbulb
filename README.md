@@ -7,13 +7,13 @@ Bulb is a component library built in React that serves as a reusable component l
 ### NPM
 
 ```sh
-npm install --save @generalelectric/bulb
+npm install --save @generalelectric/lightbulb
 ```
 
 ### Yarn 📦 :cat2:
 
 ```sh
-yarn add @generalelectric/bulb
+yarn add @generalelectric/lightbulb
 ```
 
 ## Components
@@ -21,17 +21,17 @@ yarn add @generalelectric/bulb
 ### Button
 
 ```js
-import { Button } from '@generalelectric/bulb';
+import { Button } from '@generalelectric/lightbulb';
 ```
 
 ### Card
 
 ```js
-import { Card } from '@generalelectric/bulb';
+import { Card } from '@generalelectric/lightbulb';
 ```
 
 ### Footer
 
 ```js
-import { Nav } from '@generalelectric/bulb';
+import { Nav } from '@generalelectric/lightbulb';
 ```
