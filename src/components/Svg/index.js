@@ -1,2 +1,2 @@
-import { GELogoSvg as DefaultLogo } from './GELogoSvg';
-export default DefaultLogo;
+import { GELogoSvg as GELogo } from './GELogoSvg';
+export default GELogo;

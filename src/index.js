@@ -1,16 +1,13 @@
+// import the components here and then add to the object to export below
+
 /* Components */
-import Button from '../src/components/Button';
-import Card from '../src/components/Card';
-import Footer from '../src/components/Footer';
-import Nav from '../src/components/Nav';
+import Button from './components/Button';
+import Card from './components/Card';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 /* Icons */
-import DefaultSvg from '../src/components/Svg';
+import GELogo from './components/Svg';
 
-module.exports = {
-  Button,
-  Card,
-  Footer,
-  Nav,
-  DefaultSvg
-};
+/* Object to export */
+export { Button, Card, Footer, Nav };
