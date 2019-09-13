@@ -10,10 +10,10 @@ By default, the button is GE Blue with white text.
 
 | Prop Name   | Type                                                      |
 | ----------- | --------------------------------------------------------- |
-| outline     |                                                           |
-| transparent |                                                           |
-| white       |                                                           |
-| blue        |                                                           |
+| outline     | prop                                                      |
+| transparent | prop                                                      |
+| white       | prop                                                      |
+| blue        | prop                                                      |
 | children    | Enter any text between the <Button></Button> element tags |
 
 ## Usage
