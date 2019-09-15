@@ -18,8 +18,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "lint:code",
-      "pretty:code",
+      "yarn lint:code",
+      "yarn pretty:code",
       "git add"
     ]
   },
