@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NavBrand from './NavBrand';
 import NavBreadcrumbs from './NavBreadcrumbs';
-import colors from '../../utils/colors';
+import { colors } from '../utils/colors';
 import { GELogoSvg } from '../Svg/GELogoSvg';
 
 const StyledNavContainer = styled.div`
@@ -31,7 +31,7 @@ function Nav(props) {
   const StyledNav = styled.nav`
     min-height: 75px;
     text-align: center;
-    background-color: ${props.blue ? colors.blue : colors.darkGray};
+    background-color: ${props.blue ? colors.primaryBlue : colors.darkGray};
     color: #ffffff;
     display: flex;
     flex-direction: row;

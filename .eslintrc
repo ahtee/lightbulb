@@ -5,8 +5,8 @@
     "es6": true,
     "node": true
   },
-  "extends": ["plugin:react-app/recommended"],
-  "plugins": ["react-hooks", "import"],
+  "extends": ["plugin:react-app/recommended", "plugin:jsx-a11y/recommended"],
+  "plugins": ["eslint-plugin-react", "react-hooks", "eslint-plugin-import"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"

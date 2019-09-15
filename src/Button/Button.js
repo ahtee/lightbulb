@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import colors from '../../utils/colors';
+import { colors } from '../utils/colors';
 
 /**
  * Button Component based on ge.com. Colors included: `white`, `blue`, and `outline` (transparent but Blue border and font color).
@@ -15,13 +15,13 @@ function Button(props) {
       ? 'transparent'
       : 'white' in props
       ? colors.white
-      : colors.blue};
+      : colors.primaryBlue};
     color: ${'outline' in props
-      ? colors.blue
+      ? colors.primaryBlue
       : 'white' in props
-      ? colors.blue
+      ? colors.primaryBlue
       : colors.white};
-    border: ${'outline' in props ? `2px solid ${colors.blue}` : 'none'};
+    border: ${'outline' in props ? `2px solid ${colors.primaryBlue}` : 'none'};
     border-radius: 50px;
     letter-spacing: 1px;
     max-height: 40px;

@@ -5,8 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "styled-theming": "^2.2.0"
   },
   "husky": {
     "hooks": {
@@ -15,7 +18,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "./node_modules/.bin/eslint --fix",
+      "lint:code",
+      "pretty:code",
       "git add"
     ]
   },
@@ -26,7 +30,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "lint:code": "eslint --fix ./",
+    "pretty:code": "prettier --write '**/*.js'",
+    "lint:markdown": "markdownlint -c ./.markdownlint.json"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -46,15 +53,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0",
     "typescript": "^3.6.3",
     "webpack": "^4.40.2"
-  },
-  "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
   }
 }

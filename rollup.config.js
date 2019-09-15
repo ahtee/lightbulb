@@ -5,15 +5,16 @@ import bundleSize from 'rollup-plugin-bundle-size';
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/lightbulb.bundle.js',
+    file: 'dist/lightbulb.js',
     format: 'cjs'
   },
   external: [
+    'prop-types',
     'react',
     'react-dom',
     'react-router-dom',
-    'prop-types',
-    'styled-components'
+    'styled-components',
+    'styled-theming'
   ],
   plugins: [
     resolve(),
