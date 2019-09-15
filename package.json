@@ -20,6 +20,7 @@
     "*.js": [
       "yarn lint:code",
       "yarn pretty:code",
+      "yarn lint:markdown",
       "git add"
     ]
   },
@@ -48,6 +49,7 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
+    "markdownlint-cli": "^0.18.0",
     "react-styleguidist": "^9.1.16",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
