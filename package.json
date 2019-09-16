@@ -1,7 +1,7 @@
 {
   "name": "@generalelectric/lightbulb",
   "version": "0.3.3",
-  "main": "./dist/lightbulb.bundle.js",
+  "main": "./dist/lightbulb.js",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -20,7 +20,6 @@
     "*.js": [
       "yarn lint:code",
       "yarn pretty:code",
-      "yarn lint:markdown",
       "git add"
     ]
   },
@@ -34,14 +33,20 @@
     "styleguide:build": "styleguidist build",
     "lint:code": "eslint --fix ./",
     "pretty:code": "prettier --write '**/*.js'",
-    "lint:markdown": "markdownlint -c ./.markdownlint.json"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.2.0",
+    "@storybook/addon-links": "^5.2.0",
+    "@storybook/addons": "^5.2.0",
+    "@storybook/react": "^5.2.0",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -49,7 +54,6 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
-    "markdownlint-cli": "^0.18.0",
     "react-styleguidist": "^9.1.16",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
