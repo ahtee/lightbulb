@@ -2,7 +2,14 @@
 const path = require('path');
 
 module.exports = {
+  theme: {
+    color: {
+      link: '#005eb8',
+      linkHover: '#00b5e2'
+    }
+  },
   components: 'src/**/[A-Z]*.js',
+  ignore: ['GlobalStyles.js', 'NavBrand.js', 'NavBreadcrumbs.js'],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'src/ThemeWrapper')
   },

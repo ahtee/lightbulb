@@ -1,5 +1,8 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { version } from '../../package.json';
 
 const StyledFooter = styled.footer`
   margin-top: 20px;
@@ -11,6 +14,12 @@ const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
 `;
+
+/**
+ * The Footer component may serve multiple use cases. For now it may display
+ * the version running from package.json, provide important links, or display company
+ * policies.
+ */
 
 function Footer({ company, copyrightYear, license, siteVersion }) {
   return (
@@ -24,4 +33,19 @@ function Footer({ company, copyrightYear, license, siteVersion }) {
     </StyledFooter>
   );
 }
+
+Footer.propTypes = {
+  company: PropTypes.string,
+  copyrightYear: PropTypes.string,
+  license: PropTypes.string,
+  siteVersion: PropTypes.number
+};
+
+Footer.defaultProps = {
+  company: 'My Company',
+  copyrightYear: new Date().getUTCFullYear(),
+  license: '',
+  siteVersion: version
+};
+
 export default Footer;

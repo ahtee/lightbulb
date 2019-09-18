@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const StyledNavBrandImage = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const StyledNavBrandImage = styled.div`
   margin: 0px 15px;
 `;
 
-const StyledNavBrandText = styled(Link)`
+const StyledNavBrandText = styled.a`
   padding: 0px 20px 0px 10px;
   color: #ffffff;
   text-decoration: none;
@@ -25,4 +25,14 @@ function NavBrand({ name, children }) {
     </StyledNavBrandImage>
   );
 }
+
+NavBrand.propTypes = {
+  name: PropTypes.string,
+  children: PropTypes.element.isRequired
+};
+
+NavBrand.defaultProps = {
+  name: 'My Company'
+};
+
 export default NavBrand;

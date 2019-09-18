@@ -1,72 +1,106 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.3.5",
-  "main": "./dist/lightbulb.js",
+  "version": "0.4.5",
+  "main": "./dist/lightbulb.cjs.js",
+  "module": "./dist/lightbulb.esm.js",
+  "browser": "./dist/lightbulb.js",
+  "style": "build/index.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --coverage --passWithNoTests",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "codecov": "codecov",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "lint": "eslint --ext .js,.jsx .",
+    "lint:fixall": "eslint --fix --ext .js,jsx .",
+    "pretty:code": "prettier --write '**/*.js'",
+    "storybook": "start-storybook -p 6006",
+    "deploy-storybook-ci": "storybook-to-ghpages --ci",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahtee/lightbulb.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "component library",
+    "library",
+    "GE"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahtee/lightbulb/issues"
+  },
+  "homepage": "https://github.com/ahtee/lightbulb#readme",
   "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.2.0",
+    "@storybook/addon-actions": "^5.2.0",
+    "@storybook/addon-centered": "^5.2.0",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-info": "^5.2.0",
+    "@storybook/addon-links": "^5.2.0",
+    "@storybook/addon-options": "^5.2.0",
+    "@storybook/addons": "^5.2.0",
+    "@storybook/channels": "^5.2.0",
+    "@storybook/react": "^5.2.0",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "autoprefixer": "^9.6.1",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-minify": "^0.5.1",
+    "codecov": "^3.5.0",
+    "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.18",
+    "prettier": "^1.18.2",
+    "react-styleguidist": "^9.1.16",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "sass-loader": "^8.0.0",
+    "semantic-release": "^15.13.24",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "travis-deploy-once": "^5.0.11",
+    "webpack": "^4.40.2",
+    "webpack-build-notifier": "^1.1.1",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "peerDependencies": {},
   "dependencies": {
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
-    "@types/styled-components": "^4.1.19",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "styled-components": "^4.3.2",
     "styled-theming": "^2.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "yarn lint:code",
-      "yarn pretty:code",
-      "git add"
-    ]
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "lint:code": "eslint --fix ./",
-    "pretty:code": "prettier --write '**/*.js'",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-export-default-from": "^7.5.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.6.0",
-    "@storybook/addon-actions": "^5.2.0",
-    "@storybook/addon-links": "^5.2.0",
-    "@storybook/addons": "^5.2.0",
-    "@storybook/react": "^5.2.0",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "eslint": "^6.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react-app": "^6.0.2",
-    "eslint-plugin-react-hooks": "^2.0.1",
-    "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
-    "react-styleguidist": "^9.1.16",
-    "rollup": "^1.21.2",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-bundle-size": "^1.0.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "typescript": "^3.6.3",
-    "webpack": "^4.40.2"
   }
 }

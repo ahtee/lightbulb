@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../utils/colors';
+import { colors } from '../colors';
 
 /**
- * Button Component based on ge.com. Colors included: `white`, `blue`, and `outline` (transparent but Blue border and font color).
- * It is recommended to not use more than one of these, as it may introduce render bugs (while this is still in development stage).
+ * Button Component based on ge.com. Colors included: `white`, `blue`, and `outline`
+ * (transparent but Blue border and font color).
+ * It is recommended to not use more than one of these, as it may introduce
+ * render bugs (while this is still in development stage).
  *
  * By default, the button is GE Blue with white text.
  */
@@ -38,7 +41,20 @@ function Button(props) {
       cursor: pointer;
     }
   `;
-
-  return <StyledButton onClick={props.onClick}>{props.children}</StyledButton>;
+  const { onClick, children } = props;
+  return <StyledButton onClick={onClick}>{children}</StyledButton>;
 }
+
+Button.propTypes = {
+  /** The function that will be executed each time you click the button. */
+  onClick: PropTypes.func,
+  /** The name of the button. In \<Button>Click Me!\<Button>, children is _Click Me!_ */
+  children: PropTypes.string
+};
+
+Button.defaultProps = {
+  onClick: () => {},
+  children: 'Button'
+};
+
 export default Button;

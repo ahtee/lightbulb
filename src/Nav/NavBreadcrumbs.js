@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledBreadcrumb = styled.div`
@@ -30,23 +30,38 @@ const StyledBreadcrumb = styled.div`
   }
 `;
 
-function NavBreadcrumbs({ breadcrumbs = [] }) {
+function NavBreadcrumbs({ breadcrumbs }) {
   return (
     <StyledBreadcrumb>
       <div className="container">
         <ul>
           {breadcrumbs.map(breadcrumb => (
             <li>
-              <Link to={breadcrumb.link} className="breadcrumb-link">
-                {breadcrumb}
-              </Link>
+              <a href={breadcrumb.href} className="breadcrumb-link">
+                {breadcrumb.label}
+              </a>
             </li>
           ))}
         </ul>
       </div>
 
-      <style jsx>{``}</style>
+      <style jsx />
     </StyledBreadcrumb>
   );
 }
+
+NavBreadcrumbs.propTypes = {
+  breadcrumbs: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.number.isRequired,
+      href: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired
+    })
+  )
+};
+
+NavBreadcrumbs.defaultProps = {
+  breadcrumbs: []
+};
+
 export default NavBreadcrumbs;

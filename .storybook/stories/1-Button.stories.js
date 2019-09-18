@@ -1,19 +1,23 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
+import Button from '../../src/Button';
 
 export default {
   title: 'Button'
 };
 
-export const text = () => (
-  <Button onClick={action('clicked')}>Hello Button</Button>
+export const defaultButton = () => (
+  <Button onClick={action('clicked')}>Default Button</Button>
 );
 
-export const emoji = () => (
-  <Button onClick={action('clicked')}>
-    <span role="img" aria-label="so cool">
-      😀 😎 👍 💯
-    </span>
+export const outlineButton = () => (
+  <Button outline onClick={action('clicked')}>
+    Outline Button
+  </Button>
+);
+
+export const whiteButton = () => (
+  <Button white onClick={action('clicked')}>
+    White Button
   </Button>
 );

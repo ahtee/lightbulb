@@ -11,3 +11,12 @@ public/
 .stylelintrc
 styleguide.config.js
 rollup.config.js
+.DS_Store
+.eslintcache
+node_modules
+npm-debug.log
+.travis.yml
+*.test.js
+coverage/
+*.stories.js
+*.stories.jsx
