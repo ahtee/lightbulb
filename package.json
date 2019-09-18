@@ -1,6 +1,6 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "main": "./dist/lightbulb.cjs.js",
   "module": "./dist/lightbulb.esm.js",
   "browser": "./dist/lightbulb.js",
