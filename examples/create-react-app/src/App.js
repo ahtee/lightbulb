@@ -11,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Card status="error">
+        <Card status="success" title="Success">
           <Button>Learn React</Button>
         </Card>
       </header>

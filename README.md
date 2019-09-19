@@ -18,27 +18,27 @@ yarn add @generalelectric/lightbulb
 
 ## Components
 
-### Button
+Import the specific component blocks you need:
 
-```js
-import { Button } from '@generalelectric/lightbulb';
-```
+```jsx
+import React from 'react';
+import { Button, Card } from '@generalelectric/lightbulb';
 
-### Card
-
-```js
-import { Card } from '@generalelectric/lightbulb';
-```
-
-### Footer
-
-```js
-import { Nav } from '@generalelectric/lightbulb';
+function App() {
+  return (
+    <div className="App">
+      <Card status="success" title="Success">
+        <Button>Learn React</Button>
+      </Card>
+    </div>
+  );
+}
+export default App;
 ```
 
 ## Applying the theme
 
-Apply a light, dark or toggle between themes by adding a `<ThemeProvider />` component wrapper in your App entry point.
+Optionally, you can apply a light, dark or toggle between themes by adding a `<ThemeProvider />` component wrapper in your App entry point.
 
 ```jsx
 import React from 'react'
