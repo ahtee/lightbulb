@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'Footer/node_modules/Card/node_modules/Button/node_modules/styled-components';
 import NavBrand from './NavBrand';
 import NavBreadcrumbs from './NavBreadcrumbs';
 import { colors } from '../../theme';

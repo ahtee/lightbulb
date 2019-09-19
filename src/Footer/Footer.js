@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'Card/node_modules/Button/node_modules/styled-components';
 import { version } from '../../package.json';
 import { colors } from '../../theme';
 

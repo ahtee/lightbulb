@@ -1,8 +1,8 @@
 /* Components */
-import Button from '../LightbulbButton';
-import Card from '../LightbulbCard';
-import Footer from '../LightbulbFooter';
-import Nav from '../LightbulbNav';
+import Button from '../Button';
+import Card from '../Card';
+import Footer from '../Footer';
+import Nav from '../Nav';
 
 const Lightbulb = {
   Button,
