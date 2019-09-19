@@ -1,6 +1,6 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "main": "./npm/index.js",
   "files": [
     "dist"
@@ -80,8 +80,8 @@
     "webpack-dev-server": "^3.8.1"
   },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "styled-components": "^4.3.2",
-    "prop-types": "^15.7.2"
+    "styled-components": "^4.3.2"
   }
 }
