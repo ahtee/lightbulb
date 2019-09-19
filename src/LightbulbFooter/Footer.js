@@ -3,13 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { version } from '../../package.json';
+import { colors } from '../../theme';
 
 const StyledFooter = styled.footer`
   margin-top: 20px;
-  background-color: #3a4851;
+  background-color: ${colors.darkGray};
   min-height: 100px;
   padding: 20px 0px;
-  color: #ffffff;
+  color: ${colors.white};
   display: flex;
   justify-content: center;
   align-items: center;

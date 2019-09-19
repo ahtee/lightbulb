@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import NavBrand from './NavBrand';
 import NavBreadcrumbs from './NavBreadcrumbs';
-import { colors } from '../colors';
+import { colors } from '../../theme';
 
 const StyledNavContainer = styled.div`
   width: 970px;
@@ -23,6 +23,10 @@ const StyledNavContainer = styled.div`
     font-size: 16px;
     text-decoration: none;
   }
+`;
+
+const StyledListItem = styled.li`
+  margin-left: 20px;
 `;
 
 /**
@@ -49,10 +53,6 @@ function Nav(props) {
     top: 0; 
     z-index: 999;
     transition: background-color .6s ease-in;`}
-  `;
-
-  const StyledListItem = styled.li`
-    margin-left: 20px;
   `;
 
   return (

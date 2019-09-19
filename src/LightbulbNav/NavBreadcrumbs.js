@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { colors } from '../../theme';
 
 const StyledBreadcrumb = styled.div`
-  background-color: #f8f8f8;
+  background-color: ${colors.offWhite};
   height: 50px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
-  color: #3a4851;
+  color: ${colors.secondary};
   .breadcrumb-link {
-    color: #005eb8;
+    color: ${colors.primaryBlue};
   }
   div > ul {
     display: flex;
@@ -24,7 +25,7 @@ const StyledBreadcrumb = styled.div`
     margin-left: 10px;
   }
   a {
-    color: #fff;
+    color: ${colors.white};
     font-size: 16px;
     text-decoration: none;
   }

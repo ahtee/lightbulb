@@ -1,8 +1,9 @@
-export const colors = {
+const colors = {
   darkGray: '#3a4851',
   darkThemeGray: '#212121',
   secondary: '#3a4851',
   white: '#ffffff',
+  offWhite: '#f8f8f8',
   black: '#000000',
   primaryBlue: '#005eb8',
   lightBlue: '#00b5e2',
@@ -16,13 +17,4 @@ export const colors = {
   yellow: '#ffc107'
 };
 
-export const themeColors = {
-  light: {
-    background: colors.white,
-    text: colors.black
-  },
-  dark: {
-    background: colors.darkThemeGray,
-    text: colors.white
-  }
-};
+export default colors;

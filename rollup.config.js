@@ -3,29 +3,31 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import json from 'rollup-plugin-json';
+import { uglify } from 'rollup-plugin-uglify';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const outputFile =
   NODE_ENV === 'production'
-    ? './lib/lightbulb.prod.js'
-    : './lib/lightbulb.dev.js';
+    ? `./dist/lightbulb.${NODE_ENV}.js`
+    : `./dist/lightbulb.${NODE_ENV}.js`;
 
 export default {
-  input: 'src/index.js',
+  input: 'index.js',
   output: [
     {
       file: outputFile,
       format: 'cjs'
     }
   ],
-  external: id => /^react|styled-components/.test(id),
+  external: ['react', 'react-dom', 'styled-components', 'styled-system'],
   plugins: [
+    resolve({ preferBuiltins: true, mainFields: ['module', 'main'] }),
     json({ exclude: 'node_modules/**' }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
     }),
     babel({ exclude: 'node_modules/**' }),
-    resolve(),
-    commonjs()
+    commonjs(),
+    NODE_ENV && uglify()
   ]
 };

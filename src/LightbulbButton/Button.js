@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../colors';
+import { colors } from '../../theme';
 
 /**
  * Button Component based on ge.com. Colors included: `white`, `blue`, and `outline`

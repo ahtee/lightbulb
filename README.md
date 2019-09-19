@@ -35,3 +35,19 @@ import { Card } from '@generalelectric/lightbulb';
 ```js
 import { Nav } from '@generalelectric/lightbulb';
 ```
+
+## Applying the theme
+
+Apply a light, dark or toggle between themes by adding a `<ThemeProvider />` component wrapper in your App entry point.
+
+```jsx
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import theme from './theme'
+
+const App = props => (
+  <ThemeProvider theme={theme}>{/* application elements */}</ThemeProvider>
+)
+
+export default App
+```
