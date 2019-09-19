@@ -1,44 +1,31 @@
-import autoprefixer from 'autoprefixer';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import filesize from 'rollup-plugin-filesize';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
+import replace from 'rollup-plugin-replace';
 import json from 'rollup-plugin-json';
 
-import pkg from './package.json';
-
-const globals = {
-  'prop-types': 'PropTypes',
-  react: 'React',
-  'react-dom': 'ReactDOM',
-  'react-router-dom': 'ReactRouterDOM',
-  'styled-components': 'styled',
-  'styled-theming': 'theme'
-};
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const outputFile =
+  NODE_ENV === 'production'
+    ? './lib/lightbulb.prod.js'
+    : './lib/lightbulb.dev.js';
 
 export default {
   input: 'src/index.js',
   output: [
     {
-      file: pkg.main,
-      format: 'cjs',
-      name: 'lightbulb'
-    },
-    {
-      file: pkg.module,
-      format: 'es'
+      file: outputFile,
+      format: 'cjs'
     }
   ],
-  external: Object.keys(globals),
+  external: id => /^react|styled-components/.test(id),
   plugins: [
-    peerDepsExternal(),
-    postcss({ modules: true, plugins: [autoprefixer] }),
+    json({ exclude: 'node_modules/**' }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
+    }),
     babel({ exclude: 'node_modules/**' }),
     resolve(),
-    commonjs(),
-    filesize(),
-    json({ exclude: 'node_modules/**' })
+    commonjs()
   ]
 };
