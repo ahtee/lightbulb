@@ -1,10 +1,8 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.4.9",
-  "main": "./dist/lightbulb.cjs.js",
-  "module": "./dist/lightbulb.esm.js",
-  "browser": "./dist/lightbulb.js",
-  "style": "build/index.css",
+  "version": "0.4.10",
+  "main": "./dist/lightbulb.js",
+  "style": "./dist/lightbulb.css",
   "files": [
     "dist"
   ],
@@ -32,6 +30,7 @@
   },
   "keywords": [
     "react",
+    "lightbulb",
     "component library",
     "library",
     "GE"
@@ -82,7 +81,6 @@
     "rollup-plugin-filesize": "^6.2.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
     "sass-loader": "^8.0.0",
     "semantic-release": "^15.13.24",
@@ -99,7 +97,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
     "styled-components": "^4.3.2",
     "styled-theming": "^2.2.0"
   }
