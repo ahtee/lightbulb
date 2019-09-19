@@ -1,7 +1,7 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.4.13",
-  "main": "./npm/index.js",
+  "version": "0.4.14",
+  "main": "./index.js",
   "files": [
     "dist"
   ],
