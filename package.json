@@ -1,8 +1,7 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "main": "./dist/lightbulb.js",
-  "style": "./dist/lightbulb.css",
   "files": [
     "dist"
   ],
@@ -43,6 +42,7 @@
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-a11y": "^5.2.0",
@@ -56,7 +56,6 @@
     "@storybook/channels": "^5.2.0",
     "@storybook/react": "^5.2.0",
     "@storybook/storybook-deployer": "^2.8.1",
-    "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
@@ -74,14 +73,16 @@
     "node-sass": "^4.12.0",
     "postcss": "^7.0.18",
     "prettier": "^1.18.2",
+    "prop-types": "^15.7.2",
     "react-styleguidist": "^9.1.16",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-filesize": "^6.2.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-size-snapshot": "^0.10.0",
+    "rollup-plugin-uglify": "^6.0.3",
     "sass-loader": "^8.0.0",
     "semantic-release": "^15.13.24",
     "source-map-loader": "^0.2.4",
@@ -94,7 +95,6 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2",
