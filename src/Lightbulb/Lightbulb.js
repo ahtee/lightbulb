@@ -1,13 +1,17 @@
 /* Components */
+import Alert from '../Alert';
 import Button from '../Button';
 import Card from '../Card';
-import Footer from '../Footer';
 import Nav from '../Nav';
 
+/* Theme colors */
+import theme from '../../theme';
+
 const Lightbulb = {
+  Alert,
   Button,
   Card,
-  Footer,
-  Nav
+  Nav,
+  theme
 };
 export default Lightbulb;

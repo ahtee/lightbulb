@@ -32,9 +32,8 @@ function Button(props) {
     font-size: 14px;
     outline: none;
     padding: 9px 45px;
-    margin: 10px 0px;
 
-    &:hover {
+    :hover {
       background-color: ${colors.lightBlue};
       border-color: ${colors.lightBlue};
       color: ${colors.white};

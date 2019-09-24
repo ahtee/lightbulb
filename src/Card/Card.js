@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'Button/node_modules/styled-components';
+import styled from 'styled-components';
 import { colors } from '../../theme';
 
 /**
@@ -20,7 +20,7 @@ const StyledCardHeader = styled.div`
 `;
 
 const StyledChildren = styled.div`
-  padding: 18px 18px 24px;
+  padding: 0.5rem 1.25rem;
   text-align: left;
   text-decoration: none;
 `;
@@ -30,7 +30,7 @@ function Card(props) {
   const { status, title, children } = props;
 
   const StyledCard = styled.div`
-    color: ${'status' in props ? colors.white : colors.black};
+    color: ${status in props ? colors.white : colors.black};
     box-shadow: 0 0 4px rgba(165, 165, 165, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 4px;
@@ -70,12 +70,13 @@ function Card(props) {
 Card.propTypes = {
   status: PropTypes.string,
   title: PropTypes.string,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node
 };
 
 Card.defaultProps = {
   status: 'nostatus',
-  title: ''
+  title: '',
+  children: <p>Card description</p>
 };
 
 export default Card;

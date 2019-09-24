@@ -4,6 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import json from 'rollup-plugin-json';
 import { uglify } from 'rollup-plugin-uglify';
+import pkg from './package.json';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const outputFile =
@@ -11,7 +12,7 @@ const outputFile =
     ? `./dist/lightbulb.${NODE_ENV}.js`
     : `./dist/lightbulb.${NODE_ENV}.js`;
 
-export default {
+const cjs = {
   input: 'index.js',
   output: [
     {
@@ -28,6 +29,8 @@ export default {
     }),
     babel({ exclude: 'node_modules/**' }),
     commonjs(),
-    NODE_ENV && uglify()
+    uglify()
   ]
 };
+
+export default cjs;

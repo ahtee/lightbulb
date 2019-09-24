@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'Footer/node_modules/Card/node_modules/Button/node_modules/styled-components';
+import styled from 'styled-components';
 import NavBrand from './NavBrand';
 import NavBreadcrumbs from './NavBreadcrumbs';
 import { colors } from '../../theme';
 
-const StyledNavContainer = styled.div`
+const StyledNavContainer = () => styled.div`
   width: 970px;
   margin: 0px auto;
   display: flex;
@@ -39,7 +39,7 @@ const StyledListItem = styled.li`
 function Nav(props) {
   const { name, blue, fixed, pages, breadcrumbs } = props;
 
-  const StyledNav = styled.nav`
+  const StyledNav = () => styled.nav`
     min-height: 75px;
     text-align: center;
     background-color: ${blue ? colors.primaryBlue : colors.darkGray};
@@ -60,9 +60,9 @@ function Nav(props) {
       <StyledNavContainer>
         <NavBrand name={name} />
         <ul>
-          {pages.map(({ key, href, label }) => (
-            <StyledListItem key={key}>
-              <a href={href}>{label.toUpperCase()}</a>
+          {pages.map(page => (
+            <StyledListItem key={page.key}>
+              <a href={page.href}>{page.label.toUpperCase()}</a>
             </StyledListItem>
           ))}
         </ul>

@@ -19,7 +19,7 @@ module.exports = {
         // Babel loader, will use your project’s babel.config.js
         {
           test: /\.jsx?$/,
-          exclude: /node_modules/,
+          exclude: [/node_modules/, /examples/],
           loader: 'babel-loader'
         },
         // Other loaders that are needed for your components

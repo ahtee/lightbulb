@@ -1,13 +1,16 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react"],
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "plugins": ["react", "import", "jsx-a11y"],
   "env": {
     "jest": true
   },
   "rules": {
     "no-nested-ternary": "off",
     "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
     "comma-dangle": "off",
-    "indent": "off"
+    "indent": "off",
+    "arrow-parens": "off"
   }
 }

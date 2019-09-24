@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'Footer/node_modules/Card/node_modules/Button/node_modules/styled-components';
+import styled from 'styled-components';
 
 const StyledNavBrandImage = styled.div`
   display: flex;
@@ -28,11 +28,12 @@ function NavBrand({ name, children }) {
 
 NavBrand.propTypes = {
   name: PropTypes.string,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node
 };
 
 NavBrand.defaultProps = {
-  name: 'My Company'
+  name: 'My Company',
+  children: <img src="https://via.placeholder.com/150" alt="Placeholder Logo" />
 };
 
 export default NavBrand;
