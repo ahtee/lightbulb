@@ -1,6 +1,6 @@
 {
   "name": "@generalelectric/lightbulb",
-  "version": "0.8.1",
+  "version": "0.8.3",
   "main": "./dist/lightbulb.production.js",
   "files": [
     "dist"
@@ -84,7 +84,6 @@
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
-    "@generalelectric/lightbulb": "^0.8.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
