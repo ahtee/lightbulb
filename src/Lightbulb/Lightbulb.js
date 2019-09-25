@@ -1,17 +1,17 @@
 /* Components */
 import Alert from '../Alert';
+import Breadcrumb from '../Breadcrumb';
 import Button from '../Button';
 import Card from '../Card';
 import Nav from '../Nav';
-
-/* Theme colors */
-import theme from '../../theme';
+import NavBrand from '../NavBrand';
 
 const Lightbulb = {
   Alert,
+  Breadcrumb,
   Button,
   Card,
   Nav,
-  theme
+  NavBrand
 };
 export default Lightbulb;

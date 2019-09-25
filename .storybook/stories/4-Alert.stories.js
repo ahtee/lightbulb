@@ -18,7 +18,7 @@ export const secondaryAlert = () => (
 );
 
 export const successAlert = () => (
-  <Alert isDismissable success>
+  <Alert success>
     <b>Success</b> alert message
   </Alert>
 );

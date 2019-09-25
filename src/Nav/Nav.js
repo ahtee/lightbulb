@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import NavBrand from './NavBrand';
-import NavBreadcrumbs from './NavBreadcrumbs';
+import NavBrand from '../NavBrand';
+import Breadcrumb from '../Breadcrumb';
 import { colors } from '../../theme';
 
-const StyledNavContainer = () => styled.div`
+const StyledNavContainer = styled.div`
   width: 970px;
   margin: 0px auto;
   display: flex;
@@ -37,17 +37,17 @@ const StyledListItem = styled.li`
  */
 
 function Nav(props) {
-  const { name, blue, fixed, pages, breadcrumbs } = props;
+  const { children, breadcrumbs } = props;
 
-  const StyledNav = () => styled.nav`
+  const StyledNav = styled.nav`
     min-height: 75px;
     text-align: center;
-    background-color: ${blue ? colors.primaryBlue : colors.darkGray};
+    background-color: ${'blue' in props ? colors.primaryBlue : colors.darkGray};
     color: #ffffff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    ${fixed &&
+    ${'fixed' in props &&
       `position: fixed;
     width: 100%; 
     top: 0; 
@@ -57,46 +57,27 @@ function Nav(props) {
 
   return (
     <StyledNav>
-      <StyledNavContainer>
-        <NavBrand name={name} />
-        <ul>
-          {pages.map(page => (
-            <StyledListItem key={page.key}>
-              <a href={page.href}>{page.label.toUpperCase()}</a>
-            </StyledListItem>
-          ))}
-        </ul>
-      </StyledNavContainer>
-      {breadcrumbs && <NavBreadcrumbs breadcrumbs />}
+      <StyledNavContainer>{children}</StyledNavContainer>
     </StyledNav>
   );
 }
 
 Nav.propTypes = {
-  blue: PropTypes.bool,
-  fixed: PropTypes.bool,
-  name: PropTypes.string,
-  pages: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.number.isRequired,
-      href: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
-    })
-  ),
-  breadcrumbs: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.number.isRequired,
-      href: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired
-    })
-  )
+  children: PropTypes.node.isRequired,
+  breadcrumbs: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.number.isRequired,
+        href: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired
+      })
+    )
+  ])
 };
 
 Nav.defaultProps = {
-  blue: false,
-  fixed: false,
-  name: 'My Company',
-  pages: [],
+  brandName: 'My Company',
   breadcrumbs: []
 };
 

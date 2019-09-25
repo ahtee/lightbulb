@@ -20,29 +20,27 @@ const StyledCardHeader = styled.div`
 `;
 
 const StyledChildren = styled.div`
-  padding: 0.5rem 1.25rem;
+  padding: 0.25rem 1.25rem;
   text-align: left;
   text-decoration: none;
 `;
 
 // TODO useRef to resize the graph based on the size of the Card
 function Card(props) {
-  const { status, title, children } = props;
-
   const StyledCard = styled.div`
-    color: ${status in props ? colors.white : colors.black};
+    color: ${props.status ? colors.white : colors.black};
     box-shadow: 0 0 4px rgba(165, 165, 165, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 4px;
-    background-color: ${status === 'danger'
+    background-color: ${props.status === 'danger'
       ? colors.danger
-      : status === 'error'
+      : props.status === 'error'
       ? colors.error
-      : status === 'warning'
+      : props.status === 'warning'
       ? colors.warning
-      : status === 'stable'
+      : props.status === 'stable'
       ? colors.green
-      : status === 'success'
+      : props.status === 'success'
       ? colors.success
       : colors.white}};
     &:hover {
@@ -61,8 +59,8 @@ function Card(props) {
 
   return (
     <StyledCard>
-      {title && <StyledCardHeader>{title}</StyledCardHeader>}
-      <StyledChildren>{children}</StyledChildren>
+      {props.title && <StyledCardHeader>{props.title}</StyledCardHeader>}
+      <StyledChildren>{props.children}</StyledChildren>
     </StyledCard>
   );
 }
@@ -74,7 +72,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  status: 'nostatus',
+  status: '',
   title: '',
   children: <p>Card description</p>
 };

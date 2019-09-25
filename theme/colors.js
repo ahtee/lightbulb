@@ -14,7 +14,11 @@ const colors = {
   red: '#dc3545',
   error: '#dc3545',
   warning: '#ffc107',
-  yellow: '#ffc107'
+  yellow: '#ffc107',
+  disabled: {
+    opacity: 0.65,
+    cursor: 'not-allowed'
+  }
 };
 
 export default colors;

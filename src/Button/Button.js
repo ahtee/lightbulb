@@ -33,26 +33,35 @@ function Button(props) {
     outline: none;
     padding: 9px 45px;
 
-    :hover {
-      background-color: ${colors.lightBlue};
+    &:hover {
+      ${props.disabled
+        ? `cursor: not-allowed;`
+        : `background-color: ${colors.lightBlue};
       border-color: ${colors.lightBlue};
       color: ${colors.white};
-      cursor: pointer;
+      cursor: pointer;`}
     }
   `;
-  const { onClick, children } = props;
-  return <StyledButton onClick={onClick}>{children}</StyledButton>;
+
+  const { onClick, disabled, children } = props;
+  return (
+    <StyledButton onClick={onClick} disabled={disabled}>
+      {children}
+    </StyledButton>
+  );
 }
 
 Button.propTypes = {
   /** The function that will be executed each time you click the button. */
   onClick: PropTypes.func,
+  disabled: PropTypes.bool,
   /** The name of the button. In \<Button>Click Me!\<Button>, children is _Click Me!_ */
   children: PropTypes.string
 };
 
 Button.defaultProps = {
-  onClick: () => {},
+  onClick: () => null,
+  disabled: false,
   children: 'Button'
 };
 

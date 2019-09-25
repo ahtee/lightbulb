@@ -21,3 +21,9 @@ export const whiteButton = () => (
     White Button
   </Button>
 );
+
+export const disabledButton = () => (
+  <Button disabled onClick={action('clicked')}>
+    Disabled Button
+  </Button>
+);
