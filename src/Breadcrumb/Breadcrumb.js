@@ -8,11 +8,17 @@ const StyledBreadcrumb = styled.div`
   height: 50px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
   color: ${colors.secondary};
-  .breadcrumb-link {
-    color: ${colors.primaryBlue};
-  }
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
   ul {
-    margin: 0;
+    margin: 0px;
+    list-style-type: none;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+  li {
+    margin: 0px 15px;
   }
 `;
 
