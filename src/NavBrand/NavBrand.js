@@ -9,8 +9,13 @@ const StyledNavBrandText = styled.a`
   font-size: 22px;
 `;
 
-function NavBrand({ brandImage, brandName }) {
-  return <StyledNavBrandText to="/">{brandName}</StyledNavBrandText>;
+function NavBrand({ brandName }) {
+  return (
+    <StyledNavBrandText>
+      {children}
+      {brandName}
+    </StyledNavBrandText>
+  );
 }
 
 NavBrand.propTypes = {
@@ -19,7 +24,6 @@ NavBrand.propTypes = {
 };
 
 NavBrand.defaultProps = {
-  brandImage: 'https://via.placeholder.com/50',
   brandName: 'My Company'
 };
 

@@ -10,6 +10,7 @@ const StyledNavContainer = styled.div`
   margin: 0px auto;
   display: flex;
   flex-direction: row;
+  align-items: center;
   & > ul {
     display: flex;
     justify-content: flex-end;

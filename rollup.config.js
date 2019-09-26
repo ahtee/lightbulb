@@ -4,7 +4,6 @@ import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import json from 'rollup-plugin-json';
 import { uglify } from 'rollup-plugin-uglify';
-import pkg from './package.json';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const outputFile =

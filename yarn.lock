@@ -937,16 +937,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.4.tgz#622a72bebd1e3f48d921563b4b60a762295a81fc"
   integrity sha512-6PYY5DVdAY1ifaQW6XYTnOMihmBVT27elqSjEoodchsGjzYlEsTQMcEhSud99kVawatyTZRTiVkJ/c6lwbQ7nA==
 
-"@generalelectric/lightbulb@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@generalelectric/lightbulb/-/lightbulb-0.8.1.tgz#b4bc12d159422f6fd30202951d92a67c7586c5be"
-  integrity sha512-5XzXD5WgfXoCOKSKI3jZwDdBVe8DfPaBkAlQg9ZsQV5YGeqmUN3PxXaxDHAF+n7BY1U4otqFcFUiwhHAJqZD8g==
-  dependencies:
-    react "^16.9.0"
-    react-dom "^16.9.0"
-    styled-components "^4.3.2"
-    styled-system "^5.1.2"
-
 "@icons/material@^0.2.4":
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"

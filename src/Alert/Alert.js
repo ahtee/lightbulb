@@ -19,7 +19,6 @@ const AlertButtonStyles = styled.button`
 function Alert(props) {
   const AlertStyles = styled.div`
     position: relative;
-    width: 100%;
     padding: 0.75rem 1.25rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
