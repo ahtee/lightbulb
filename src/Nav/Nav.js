@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import NavBrand from '../NavBrand';
-import Breadcrumb from '../Breadcrumb';
 import { colors } from '../../theme';
 
 const StyledNavContainer = styled.div`
@@ -10,23 +8,9 @@ const StyledNavContainer = styled.div`
   margin: 0px auto;
   display: flex;
   flex-direction: row;
-  & > ul {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px 10px;
-  }
-  & > ul > li {
-    display: flex;
-  }
-  & > ul > li > a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-  }
-`;
-
-const StyledListItem = styled.li`
-  margin-left: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  color: ${colors.blue};
 `;
 
 /**
@@ -37,7 +21,7 @@ const StyledListItem = styled.li`
  */
 
 function Nav(props) {
-  const { children, breadcrumbs } = props;
+  const { children } = props;
 
   const StyledNav = styled.nav`
     min-height: 75px;
@@ -51,8 +35,7 @@ function Nav(props) {
       `position: fixed;
     width: 100%; 
     top: 0; 
-    z-index: 999;
-    transition: background-color .6s ease-in;`}
+    z-index: 999;`};
   `;
 
   return (
@@ -63,22 +46,11 @@ function Nav(props) {
 }
 
 Nav.propTypes = {
-  children: PropTypes.node.isRequired,
-  breadcrumbs: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        key: PropTypes.number.isRequired,
-        href: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired
-      })
-    )
-  ])
+  children: PropTypes.node
 };
 
 Nav.defaultProps = {
-  brandName: 'My Company',
-  breadcrumbs: []
+  children: <span />
 };
 
 export default Nav;

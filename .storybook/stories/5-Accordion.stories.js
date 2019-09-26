@@ -5,7 +5,7 @@ export default {
   title: 'Accordion'
 };
 
-export const defaultAlert = () => (
+export const defaultAccordion = () => (
   <>
     <Accordion>
       <div label="Alligator Mississippiensis">

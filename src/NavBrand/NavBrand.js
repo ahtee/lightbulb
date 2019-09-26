@@ -6,20 +6,25 @@ const StyledNavBrandText = styled.a`
   padding: 0px 20px 0px 15px;
   color: #ffffff;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.5rem;
 `;
 
-function NavBrand({ brandImage, brandName }) {
-  return <StyledNavBrandText to="/">{brandName}</StyledNavBrandText>;
+function NavBrand({ children, brandName }) {
+  return (
+    <StyledNavBrandText>
+      {children}
+      {brandName}
+    </StyledNavBrandText>
+  );
 }
 
 NavBrand.propTypes = {
-  brandImage: PropTypes.string,
+  children: PropTypes.node,
   brandName: PropTypes.string
 };
 
 NavBrand.defaultProps = {
-  brandImage: 'https://via.placeholder.com/50',
+  children: <span />,
   brandName: 'My Company'
 };
 

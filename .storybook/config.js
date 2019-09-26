@@ -9,7 +9,7 @@ addDecorator(centered);
 addDecorator(withA11y);
 
 withInfo({
-  inline: false,
+  inline: true,
   header: true,
   source: true
 });

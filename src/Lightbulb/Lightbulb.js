@@ -5,6 +5,7 @@ import Button from '../Button';
 import Card from '../Card';
 import Nav from '../Nav';
 import NavBrand from '../NavBrand';
+import NavItems from '../NavItems';
 
 const Lightbulb = {
   Alert,
@@ -12,6 +13,7 @@ const Lightbulb = {
   Button,
   Card,
   Nav,
-  NavBrand
+  NavBrand,
+  NavItems
 };
 export default Lightbulb;
