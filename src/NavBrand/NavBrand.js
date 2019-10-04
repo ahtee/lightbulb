@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledNavBrandText = styled.a`
+const StyledNavBrandText = styled.div`
   display: flex;
   align-items: center;
   padding: 0px 20px 0px 15px;
@@ -12,7 +12,7 @@ const StyledNavBrandText = styled.a`
 `;
 
 const Span = styled.span`
-  margin-left: 15px;
+  margin-left: 20px;
 `;
 
 function NavBrand({ children, brandName }) {
