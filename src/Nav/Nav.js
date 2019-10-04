@@ -26,7 +26,11 @@ function Nav(props) {
   const StyledNav = styled.nav`
     min-height: 75px;
     text-align: center;
-    background-color: ${'blue' in props ? colors.primaryBlue : colors.darkGray};
+    background-color: ${'blue' in props
+      ? colors.primaryBlue
+      : 'black' in props
+      ? colors.black
+      : colors.darkGray};
     color: #ffffff;
     display: flex;
     flex-direction: row;

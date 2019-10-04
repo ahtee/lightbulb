@@ -44,6 +44,15 @@ export const blueNavWithPages = () => (
   </BrowserRouter>
 );
 
+export const blackNavWithPages = () => (
+  <BrowserRouter>
+    <Nav black>
+      <NavBrand />
+      <NavItems right items={pages} />
+    </Nav>
+  </BrowserRouter>
+);
+
 export const blueNavWithBreadcrumbs = () => (
   <BrowserRouter>
     <Nav blue>

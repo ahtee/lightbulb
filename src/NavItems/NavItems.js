@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import colors from '../../theme/colors';
@@ -8,9 +8,21 @@ const LI = styled.li`
   margin: 0px 20px;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: ${colors.white};
+
+  .activeStyledLink {
+    display: inline block;
+    border-bottom: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    bottom: 0;
+    content: '';
+    left: 35%;
+    position: absolute;
+    width: 0;
+  }
 `;
 
 function NavItems(props) {
@@ -26,7 +38,9 @@ function NavItems(props) {
     <UL>
       {items.map(item => (
         <LI key={item.id}>
-          <StyledLink to={item.href}>{item.title}</StyledLink>
+          <StyledLink to={item.href} activeClassName="activeStyledLink">
+            {item.title}
+          </StyledLink>
         </LI>
       ))}
     </UL>
