@@ -17,7 +17,7 @@ npm install --save lightbulb
 ### Yarn 📦 :cat2:
 
 ```sh
-yarn add @generalelectric/lightbulb
+yarn add lightbulb
 ```
 
 ## Components
@@ -26,7 +26,7 @@ Import the specific component blocks you need:
 
 ```jsx
 import React from 'react';
-import { Button, Card } from '@generalelectric/lightbulb';
+import { Button, Card } from 'lightbulb';
 
 function App() {
   return (
