@@ -1,3 +1,7 @@
+```diff
+- This repo is currently not maintained! Here still for archival purposes!
+```
+
 # :bulb: Lightbulb - React component library
 
 Bulb is a component library built in React that serves as a reusable component library for modern user interfaces.
@@ -7,7 +11,7 @@ Bulb is a component library built in React that serves as a reusable component l
 ### NPM
 
 ```sh
-npm install --save @generalelectric/lightbulb
+npm install --save lightbulb
 ```
 
 ### Yarn 📦 :cat2:
